@@ -39,7 +39,7 @@ pipeline {
         stage('Publish to Nexus') {
             steps {
                 script {
-                    def NEXUS_URL = "http://http://localhost/:8081/service/rest/v1/components?repository=nuget-releases"
+                    def NEXUS_URL = "http://localhost:8081/service/rest/v1/components?repository=nuget-releases"
                     def NEXUS_USER = credentials('nexus-credentials-id').username
                     def NEXUS_PASS = credentials('nexus-credentials-id').password
 
